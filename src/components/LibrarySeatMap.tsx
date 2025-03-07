@@ -1,17 +1,17 @@
 import React, { useCallback } from 'react';
-import LibrarySeatComponent from './LibrarySeat.tsx';
+import LibrarySeatComponent from './LibrarySeat';
 import styles from '../styles/LibrarySeatMap.module.css';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { RootState } from '../redux/store.ts';
+import { RootState } from '../redux/store';
 import {
     LibrarySeat,
     LibrarySeatStatus,
     LibrarySeatType,
-} from '../types/states.ts';
-import { useFetchLibrarySeatsQuery } from '../redux/apis/librarySeatApi.ts';
-import { useLibrarySeatManager } from '../hooks/useLibrarySeatManager.tsx';
-import LoadingIndicator from './LoadingIndicator.tsx';
+} from '../types/states';
+import { useFetchLibrarySeatsQuery } from '../redux/apis/librarySeatApi';
+import { useLibrarySeatManager } from '../hooks/useLibrarySeatManager';
+import LoadingIndicator from './LoadingIndicator';
 
 const LibrarySeatMap: React.FC = () => {
     const { data: librarySeats = [], isLoading } = useFetchLibrarySeatsQuery(

@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { LibrarySeat, LibrarySeatStatus } from '../../types/states.ts';
-import { BASE_URL } from '../../config/URL.ts';
+import { LibrarySeat, LibrarySeatStatus } from '../../types/states';
+import { BASE_URL } from '../../config/URL';
 
 export const librarySeatApi = createApi({
     reducerPath: 'librarySeatApi',

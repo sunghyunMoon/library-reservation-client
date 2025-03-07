@@ -2,14 +2,14 @@ import React, { useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import styles from '../styles/ReservePage.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../redux/store.ts';
-import { updateMySeat } from '../redux/slices/mySeatSlice.ts';
-import { AppDispatch } from '../redux/store.ts';
-import { useUpdateLibrarySeatMutation } from '../redux/apis/librarySeatApi.ts';
-import Button from './Button.tsx';
-import useHandleBeforeUnload from '../hooks/useHandleBeforeUnload.tsx';
-import Timer from './Timer.tsx';
-import { updateMySeatServiceKeepAlive } from '../api/service/mySeatService.ts';
+import { RootState } from '../redux/store';
+import { updateMySeat } from '../redux/slices/mySeatSlice';
+import { AppDispatch } from '../redux/store';
+import { useUpdateLibrarySeatMutation } from '../redux/apis/librarySeatApi';
+import Button from './Button';
+import useHandleBeforeUnload from '../hooks/useHandleBeforeUnload';
+import Timer from './Timer';
+import { updateMySeatServiceKeepAlive } from '../api/service/mySeatService';
 
 const ReservePage: React.FC = () => {
     const { id } = useParams<{ id: string }>();

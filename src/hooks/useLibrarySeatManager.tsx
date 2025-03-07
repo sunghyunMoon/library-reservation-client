@@ -1,12 +1,12 @@
 import { useCallback } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { AppDispatch } from '../redux/store.ts';
-import { updateMySeat } from '../redux/slices/mySeatSlice.ts';
+import { AppDispatch } from '../redux/store';
+import { updateMySeat } from '../redux/slices/mySeatSlice';
 import {
     librarySeatApi,
     useUpdateLibrarySeatMutation,
-} from '../redux/apis/librarySeatApi.ts';
+} from '../redux/apis/librarySeatApi';
 
 export const useLibrarySeatManager = () => {
     const dispatch = useDispatch<AppDispatch>();

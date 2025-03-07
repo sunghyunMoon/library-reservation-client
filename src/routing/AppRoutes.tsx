@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import ReservePage from '../components/ReservePage.tsx';
-import LibrarySeatMap from '../components/LibrarySeatMap.tsx';
+import ReservePage from '../components/ReservePage';
+import LibrarySeatMap from '../components/LibrarySeatMap';
 
 const AppRoutes: React.FC = () => (
     <Routes>

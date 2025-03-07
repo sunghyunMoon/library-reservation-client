@@ -1,7 +1,7 @@
 import { configureStore, AnyAction } from '@reduxjs/toolkit';
-import mySeatReducer from './slices/mySeatSlice.ts';
+import mySeatReducer from './slices/mySeatSlice';
 import { ThunkAction, ThunkDispatch } from '@reduxjs/toolkit';
-import { librarySeatApi } from './apis/librarySeatApi.ts';
+import { librarySeatApi } from './apis/librarySeatApi';
 
 const store = configureStore({
     reducer: {
