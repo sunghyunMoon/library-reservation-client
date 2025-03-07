@@ -1,6 +1,6 @@
-import { BASE_URL } from '../../config/URL.ts';
-import { MySeatState } from '../../types/states.ts';
-import axiosInstance from '../axiosInstance.ts';
+import { BASE_URL } from '../../config/URL';
+import { MySeatState } from '../../types/states';
+import axiosInstance from '../axiosInstance';
 
 /**
  * 특정 사용자의 예약 상태를 업데이트하는 서비스
@@ -43,7 +43,7 @@ export const fetchMySeatService = async (
             throw new Error('User reservation not found');
         }
 
-        return response.data[0]; // 첫 번째 사용자 데이터 반환
+        return response.data; // 첫 번째 사용자 데이터 반환
     } catch (error) {
         console.error('Failed to fetch my seat:', error);
         throw error;

@@ -5,11 +5,16 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "strict": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@types/*": ["types/*"]
+    },
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "outDir": "./dist",  // ⬅ 컴파일된 JS 파일을 dist 폴더에 저장
+    "rootDir": "./src",  // ⬅ 원본 TypeScript 코드 위치 지정
+    "noEmitOnError": true // ⬅ 오류 발생 시 빌드 파일 생성 방지
   },
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "include": ["global.d.ts", "src/**/*"]
 }

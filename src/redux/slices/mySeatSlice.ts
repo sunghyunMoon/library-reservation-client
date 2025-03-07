@@ -1,9 +1,9 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
-import { MySeatState } from '../../types/states.ts';
+import { MySeatState } from '../../types/states';
 import {
     fetchMySeatService,
     updateMySeatService,
-} from '../../api/service/mySeatService.ts';
+} from '../../api/service/mySeatService';
 
 /* 초기 상태 */
 const initialState: MySeatState = {
