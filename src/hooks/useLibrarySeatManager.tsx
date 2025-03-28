@@ -14,8 +14,8 @@ export const useLibrarySeatManager = () => {
     const navigate = useNavigate();
 
     /**
-     * 특정 주차 면의 유효성을 검사하는 함수
-     * @param id - 주차 면 ID
+     * 특정 좌석의 유효성을 검사하는 함수
+     * @param id - 좌석 ID
      * @returns {boolean} - 유효성 검사 결과
      */
     const validateLibrarySeat = useCallback(
@@ -27,7 +27,7 @@ export const useLibrarySeatManager = () => {
 
                 if (result.status !== '비점유') {
                     alert(
-                        '현재 주차 면은 이미 예약되었습니다. 다른 주차 면을 선택해주세요.'
+                        '현재 좌석은 이미 예약되었습니다. 다른 좌석을 선택해주세요.'
                     );
                     return false;
                 }
@@ -43,9 +43,9 @@ export const useLibrarySeatManager = () => {
     );
 
     /**
-     * 주차 면을 예약하는 함수
-     * @param id - 주차 면 ID
-     * @param type - 주차 면 타입
+     * 좌석을 예약하는 함수
+     * @param id - 좌석 ID
+     * @param type - 좌석 타입
      */
     const reserveLibrarySeat = useCallback(
         async (id: string) => {
