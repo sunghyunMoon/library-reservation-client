@@ -34,7 +34,7 @@ const LibrarySeatMap: React.FC = () => {
                 if (status === '점유' && id === mySeat.librarySeatId) {
                     navigate(`/reserve/${id}`);
                 } else {
-                    alert(`주차면 ${mySeat.librarySeatId}번에 예약하셨습니다.`);
+                    alert(`좌석 ${mySeat.librarySeatId}번에 예약하셨습니다.`);
                 }
             } else {
                 if (status === '비점유') {
@@ -51,12 +51,12 @@ const LibrarySeatMap: React.FC = () => {
     );
 
     if (isLoading) {
-        return <LoadingIndicator message="주차장 데이터를 불러오는 중..." />;
+        return <LoadingIndicator message="도서관 좌석 데이터를 불러오는 중..." />;
     }
 
     return (
         <div className={styles.librarySeatMap}>
-            <h1 className={styles.title}>지하 주차장 도면</h1>
+            <h1 className={styles.title}>도서관 도면</h1>
 
             <div className={styles.libraryLayout}>
                 {Array.from({ length: 4 }).map((_, rowIndex) => (

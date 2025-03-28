@@ -68,7 +68,7 @@ const ReservePage: React.FC = () => {
     };
 
     if (!id || !mySeat) {
-        return <div>해당 주차 면을 찾을 수 없습니다.</div>;
+        return <div>해당 좌석을 찾을 수 없습니다.</div>;
     }
 
     return (
@@ -76,14 +76,14 @@ const ReservePage: React.FC = () => {
             <div className={styles.card}>
                 {mySeat?.status === '점유' ? (
                     <>
-                        <h2>주차 면 {mySeat?.librarySeatId} 사용 완료</h2>
+                        <h2>좌석 {mySeat?.librarySeatId} 사용 완료</h2>
                         <div className={styles.actions}>
                             <Button
                                 className={styles.completeButton}
                                 onClick={() =>
                                     handleSpotUpdate(
                                         '비점유',
-                                        `주차 면 {id} 사용이 완료되었습니다.`
+                                        `좌석 {id} 사용이 완료되었습니다.`
                                     )
                                 }
                             >
@@ -93,7 +93,7 @@ const ReservePage: React.FC = () => {
                     </>
                 ) : (
                     <>
-                        <h2>주차 면 {mySeat?.librarySeatId} 예약</h2>
+                        <h2>좌석 {mySeat?.librarySeatId} 예약</h2>
                         <div className={styles.actions}>
                             <Button
                                 className={styles.reserveButton}

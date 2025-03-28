@@ -5,7 +5,7 @@ import axiosInstance from '../axiosInstance';
 /**
  * 특정 사용자의 예약 상태를 업데이트하는 서비스
  * @param userId - 사용자 ID
- * @param librarySeatId - 업데이트할 주차 면 ID
+ * @param librarySeatId - 업데이트할 좌석 ID
  * @param status - 예약 상태 ('예약', '점유', '비점유')
  * @returns 업데이트된 MySeatState
  */
@@ -54,7 +54,7 @@ export const fetchMySeatService = async (
  * 업데이트 요청이 브라우저 종료 시에도 서버로 전달되도록 보장하는 서비스
  *
  * @param id - 사용자 ID
- * @param librarySeatId - 업데이트할 주차 면 ID
+ * @param librarySeatId - 업데이트할 좌석 ID
  * @param status - 예약 상태
  *
  * fetch API의 keepalive: true 옵션을 사용하여
