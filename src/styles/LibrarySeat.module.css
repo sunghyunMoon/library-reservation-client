@@ -1,46 +1,57 @@
 .librarySeat {
-    width: 100px;
-    height: 120px;
+    width: 110px;
+    height: 130px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid #ccc;
-    border-radius: 8px;
+    border: none;
+    border-radius: 12px;
     cursor: pointer;
-    transition:
-        transform 0.2s,
-        background-color 0.2s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    overflow: hidden;
 }
 
 .librarySeat:hover {
-    transform: scale(1.1);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-.available {
-    background-color: #d4edda;
-    border-color: #28a745;
+/* 좌석 상태별 스타일 */
+
+/* 사용 가능 좌석 */
+.librarySeat.available {
+    background: linear-gradient(135deg, #e0f7e9, #c8e6c9);
+    border: 2px solid #28a745;
     color: #155724;
 }
 
-.occupied {
-    background-color: #f8d7da;
-    border-color: #dc3545;
+/* 점유된 좌석 */
+.librarySeat.occupied {
+    background: linear-gradient(135deg, #fbeaea, #f8d7da);
+    border: 2px solid #dc3545;
     color: #721c24;
 }
 
-.reserved {
-    background-color: #d1ecf1;
-    border-color: #17a2b8;
+/* 예약된 좌석 */
+.librarySeat.reserved {
+    background: linear-gradient(135deg, #e3f2f9, #d1ecf1);
+    border: 2px solid #17a2b8;
     color: #0c5460;
 }
 
-.id {
-    font-size: 18px;
-    font-weight: bold;
+/* 좌석 내부 텍스트 스타일 */
+.librarySeat .id {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 4px;
 }
 
-.status {
-    font-size: 14px;
+.librarySeat .status {
+    font-size: 16px;
     color: inherit;
 }
