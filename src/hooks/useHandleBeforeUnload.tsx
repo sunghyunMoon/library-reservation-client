@@ -10,7 +10,7 @@ const useHandleBeforeUnload = ({
     onUnload,
 }: UseHandleBeforeUnloadParams) => {
     useEffect(() => {
-        const handleBeforeUnload = (event: BeforeUnloadEvent) => {
+        const handleBeforeUnload = () => {
             if (condition) {
                 onUnload();
             }
